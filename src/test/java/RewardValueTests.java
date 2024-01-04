@@ -20,11 +20,20 @@ public class RewardValueTests {
 
     @Test
     void convert_from_cash_to_miles() {
-        assert false;
+        double cashValue = 0.0035;
+        double target = 1;
+        var rewardValue = new RewardValue(cashValue);
+        assertEquals(target, rewardValue.getMilesValue());
+
+
     }
 
     @Test
     void convert_from_miles_to_cash() {
-        assert false;
+        int milesValue = 1;
+        double target = 0.0035;
+        var rewardValue = new RewardValue(milesValue);
+        assertEquals(target, rewardValue.getCashValue());
+
     }
 }
